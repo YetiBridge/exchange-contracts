@@ -1,22 +1,26 @@
 {
-  "name": "@pangolindex/exchange-contracts",
+  "name": "@gogettermeme/exchange-contracts",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.1",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "chai": "^4.2.0",
     "ethereum-waffle": "^3.2.1",
     "ethereumjs-tx": "^2.1.2",
-    "ethers": "^5.0.24",
-    "hardhat": "^2.0.6"
+    "ethers": "^5.3.1",
+    "hardhat": "^2.4.1",
+    "hardhat-deploy": "^0.8.8",
+    "hardhat-spdx-license-identifier": "^2.0.3",
+    "web3": "^1.2.11"
   },
   "version": "1.0.1",
   "description": "Contracts for the Pangolin Dex.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/pangolindex/exchange-contracts.git"
+    "url": "git+ssh://git@github.com/gogettermeme/exchange-contracts.git"
   },
-  "author": "Connor Daly <connor.daly@avalabs.org>",
+  "author": "GoGetterMeme",
   "license": "MIT",
   "scripts": {
     "precompile": "rimraf ./build/",
@@ -27,7 +31,7 @@
     "prepublishOnly": "yarn test"
   },
   "bugs": {
-    "url": "https://github.com/pangolindex/exchange-contracts/issues"
+    "url": "https://github.com/gogettermeme/exchange-contracts/issues"
   },
   "homepage": "https://pangolin.exchange"
 }

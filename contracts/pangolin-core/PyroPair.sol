@@ -1,14 +1,14 @@
 pragma solidity =0.5.16;
 
 import './interfaces/IPangolinPair.sol';
-import './PangolinERC20.sol';
+import './PyroERC20.sol';
 import './libraries/Math.sol';
 import './libraries/UQ112x112.sol';
 import './interfaces/IERC20.sol';
 import './interfaces/IPangolinFactory.sol';
 import './interfaces/IPangolinCallee.sol';
 
-contract PangolinPair is IPangolinPair, PangolinERC20 {
+contract PyroPair is IPangolinPair, PyroERC20 {
     using SafeMath  for uint;
     using UQ112x112 for uint224;
 

@@ -3,10 +3,10 @@ pragma solidity =0.5.16;
 import './interfaces/IPangolinERC20.sol';
 import './libraries/SafeMath.sol';
 
-contract PangolinERC20 is IPangolinERC20 {
+contract PyroERC20 is IPangolinERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'Pangolin Liquidity';
+    string public constant name = 'Pyro Liquidity';
     string public constant symbol = 'PGL';
     uint8 public constant decimals = 18;
     uint  public totalSupply;

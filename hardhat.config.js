@@ -1,5 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
+require('hardhat-deploy');
+require("@nomiclabs/hardhat-web3");
+require('hardhat-spdx-license-identifier');
+
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -39,6 +43,21 @@ module.exports = {
         version: "0.8.0"
       }
     ]
+    
+  },
+  spdxLicenseIdentifier: {
+    overwrite: true,
+    runOnCompile: true,
+  },
+  paths: {
+    sources: "./src",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
+    deploy: "./deploy2",
+  },
+  mocha: {
+    timeout: 20000
   },
   networks: {
     hardhat: {
@@ -50,19 +69,49 @@ module.exports = {
       url: 'http://localhost:9650/ext/bc/C/rpc',
       gasPrice: 470000000000,
       chainId: 43112,
-      accounts: ["0x56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027"]
+      accounts: ["0xb8e14836c99d84cf5d4e9463747dd9a4cfb86bf85e9149ce48a99e987e476570"]
     },
     fuji: {
       url: 'https://api.avax-test.network/ext/bc/C/rpc',
       gasPrice: 470000000000,
       chainId: 43113,
-      accounts: []
+      accounts: ["0xb8e14836c99d84cf5d4e9463747dd9a4cfb86bf85e9149ce48a99e987e476570"]
     },
     mainnet: {
       url: 'https://api.avax.network/ext/bc/C/rpc',
       gasPrice: 470000000000,
       chainId: 43114,
-      accounts: []
-    }
+      accounts: ["0xb8e14836c99d84cf5d4e9463747dd9a4cfb86bf85e9149ce48a99e987e476570"]
+    },
   }
 };
+
+// module.exports = {
+//   defaultNetwork: "rinkeby",
+//   networks: {
+//     hardhat: {
+//     },
+//     rinkeby: {
+//       url: "https://eth-mainnet.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
+//       accounts: [privateKey1, privateKey2, ...]
+//     }
+//   },
+//   solidity: {
+//     version: "0.5.15",
+//     settings: {
+//       optimizer: {
+//         enabled: true,
+//         runs: 200
+//       }
+//     }
+//   },
+//   paths: {
+//     sources: "./contracts",
+//     tests: "./test",
+//     cache: "./cache",
+//     artifacts: "./artifacts"
+//   },
+//   mocha: {
+//     timeout: 20000
+//   }
+// }

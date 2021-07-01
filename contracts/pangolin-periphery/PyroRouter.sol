@@ -9,7 +9,7 @@ import './libraries/SafeMath.sol';
 import './interfaces/IERC20.sol';
 import './interfaces/IWAVAX.sol';
 
-contract PangolinRouter is IPangolinRouter {
+contract PyroRouter is IPangolinRouter {
     using SafeMath for uint;
 
     address public immutable override factory;
